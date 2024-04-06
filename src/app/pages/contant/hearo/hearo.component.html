@@ -1,0 +1,13 @@
+<section id="hearo" >
+    <div class="container ">
+        <div class="contant">
+            <div class="hearo-contant">
+                <h2>{{hearo.title}}<span >PrestigeTN</span><br>Tunisia</h2>
+                <p>{{hearo.contant}}</p>
+                <button><a [routerLink]="hearo.getStartedLink">Get Started</a></button>
+                <button class="btn2"><a [routerLink]="hearo.LearnMoreLink">Learn More</a></button>
+            </div>
+            <img [src]="hearo.srcImg" alt="hearo" class="hearo-img">
+        </div>
+    </div>
+</section>

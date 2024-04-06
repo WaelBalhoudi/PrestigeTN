@@ -1,0 +1,68 @@
+<section>
+    <div class="container">
+        <p><a routerLink="/Cars List"> < back</a></p>
+        <div class="contant">
+            <div class="images">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img [src]="carService.carList[id].image1" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img [src]="carService.carList[id].image2" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img [src]="carService.carList[id].image3" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+            <div class="rent">
+               <h2 >{{carService.carList[id].name}}</h2>
+               <p>Price:</p><h3>{{carService.carList[id].price}}$</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptates fugit hic maxime ratione reiciendis magnam, aut tempore aliquam laudantium saepe molestiae, eligendi laborum corporis ipsa quasi culpa. Dolorum, autem!</p>
+                <button class="btn-rent"><a routerLink="/reservation">Rent Now</a></button>
+            </div>
+        </div>
+        <hr>
+        <div class="grid">
+            <div class="contant-items"><p class="strong">Production Date : </p>{{carService.carList[id].prductionDate}}</div>
+            <div class="contant-items"><p class="strong">Fule: </p>{{carService.carList[id].fule}}</div>
+            <div class="contant-items">
+                <div *ngIf="carService.carList[id].rentedNow==true;else elseBlock" >
+                    <p class="strong">Rented Now</p>: Yes
+                </div>
+                <ng-template #elseBlock>
+                    <p class="strong">Rented Now</p>: No
+                </ng-template>
+            </div>
+            <div class="contant-items"><p class="strong">Power: </p>{{carService.carList[id].power}}</div>
+            <div class="contant-items"><p class="strong">Gearbox: </p>{{carService.carList[id].gearbox}}</div>
+        </div>
+        <hr>
+        <h3>Basic Date </h3>
+        <div class="grid">
+            <div class="contant-items"><p class="strong">Body Type: </p>{{carService.carList[id].bodyType}}</div>
+            <div class="contant-items"><p class="strong">Type: </p>{{carService.carList[id].type}}</div>
+            <div class="contant-items"><p class="strong">Drivetrain: </p>{{carService.carList[id].drivetrain}}</div>
+            <div class="contant-items"><p class="strong">Seats: </p>{{carService.carList[id].seats}}</div>
+            <div class="contant-items"><p class="strong">Doors: </p>{{carService.carList[id].doors}}</div>
+        </div>
+        
+
+       
+    </div>
+</section>

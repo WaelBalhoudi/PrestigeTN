@@ -1,0 +1,12 @@
+<section id="contact">
+    <div class="container">
+        <h2 class="title">Contact</h2>
+        <div class="cards ">
+            <div class="contact-contant" *ngFor="let i of contactContant">
+                <img [src]="i.srcImg" class="contact-icon" alt=" facebook">
+                <p>{{i.title}}</p>
+            </div>
+    
+        </div>
+    </div>
+</section>

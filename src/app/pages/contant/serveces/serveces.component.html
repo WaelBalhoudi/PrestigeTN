@@ -1,0 +1,17 @@
+<section id="serveces">
+    <div class="container">
+        <h2 class="title">Services</h2>
+       <div class="cards">
+        <div class="card" *ngFor="let card of cards">
+            <div class="card-icon ">
+                <img [src]="card.srcImg"  class="icons" alt="car img">
+            </div>
+            <div class="card-body">
+                <h1 class="card-title">{{card.title}}</h1>
+                <p class="card-contant">{{card.paragrphe}}</p>
+                <button>Learn more</button>
+            </div>
+        </div>
+       </div>
+    </div>
+   </section>

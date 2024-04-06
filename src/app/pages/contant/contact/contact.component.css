@@ -1,0 +1,43 @@
+.about-img{
+    width: 50%;
+}
+.what-about{
+    margin-left: 50px;
+    width: 50%;
+}
+.what-about h2{
+    padding: 15px 0 0 0 ;
+}
+.what-about p{
+    padding: 10px 0;
+}
+.cards{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    margin: 30px;
+
+}
+
+
+.contact-contant{
+    cursor: pointer;
+}
+.contact-contant p{
+    margin: 15px 0;
+}
+.contact-icon{
+    width: 60px;
+}
+
+
+
+@media(max-width:600px){
+  
+    .cards{
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 50px;
+    }
+
+}

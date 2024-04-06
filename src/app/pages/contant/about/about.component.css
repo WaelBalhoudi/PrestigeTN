@@ -1,0 +1,50 @@
+#about,#contact{
+    padding: 50px 0;
+}
+
+.contant{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+.about-img{
+    width: 50%;
+}
+.what-about{
+    margin-left: 50px;
+    width: 50%;
+}
+.what-about h2{
+    padding: 15px 0 0 0 ;
+}
+.what-about p{
+    padding: 10px 0;
+}
+
+
+
+
+@media(max-width:800px){
+   
+
+    .about-contant{
+        flex-direction: column;
+    }
+
+    .about-img{
+        width: 70%;
+
+    }
+    .what-about{
+        width: 70%;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+    .what-about h2{
+        margin: 20px 0;
+        text-align: center;
+    }
+}
+

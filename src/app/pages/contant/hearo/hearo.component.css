@@ -1,0 +1,67 @@
+#hearo{
+    background-color:var(--bg-color);
+    
+    padding: 50px 0;
+}
+.contant{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+.hearo-contant p{
+    width: 50%;
+    margin: 15px 0;
+    margin-right: 15px;
+    /* margin-top: 1; */
+}
+.hearo-contant span{
+    color: var(--primary-color);
+}
+
+.hearo-contant button:active{
+    transform: scale(.8);
+}
+.hearo-img{
+    width: 80%;
+    max-width: 400px;
+}
+.btn2{
+   margin-left: 10px;
+}
+button{
+    padding: 7px 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    font-size: 15px;
+    color: white;
+    transition: all ease-in-out .5s;
+}
+
+a{
+   text-decoration: none;
+   color: white;
+}
+
+
+
+
+@media(max-width:600px){
+   
+   .hearo-img{
+    display: none;
+   }
+   .hearo-contant {
+    text-align: center;
+    }
+   .hearo-contant p{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin: 15px 0;
+    }
+   
+}

@@ -1,0 +1,31 @@
+<app-hearo [hearo]="hearo"></app-hearo>
+
+<section class="container">
+    <h2 class="title">Please full the information of car</h2>
+    <form action="">
+        <input type="text" placeholder="Name" [(ngModel)]="car.name" name="name" >
+        <div class="info">
+            <input type="text" placeholder="Price" [(ngModel)]="car.price" name="price">
+            <input type="date" placeholder="Production Date " [(ngModel)]="car.prductionDate" name="date">
+            <input type="text" placeholder="Type of fule" [(ngModel)]="car.fule" name="fule">
+            <input type="text" placeholder="Power"[(ngModel)]="car.power" name="power">
+        </div>
+        <div class="radioBtn">  
+            <p>Rented Now :</p> <p>yes</p><input type="radio"name="rentedNow" [(ngModel)]="car.rentedNow" value="true"><p>No</p><input type="radio" name="rentedNow" [(ngModel)]="car.rentedNow" value="false">
+        </div>
+        <div class="info">
+            <input type="text" placeholder="Gearbox" [(ngModel)]="car.gearbox" name="gearbox">
+            <input type="text" placeholder="Body Type" [(ngModel)]="car.bodyType" name="bodyType">
+            <input type="text" placeholder="Type" [(ngModel)]="car.type" name="tyep">
+            <input type="text" placeholder="Drivetrain" [(ngModel)]="car.drivetrain" name="drivetrain">
+            <input type="text" placeholder="Seats" [(ngModel)]="car.seats" name="seats">
+            <input type="text" placeholder="Number of Doors" [(ngModel)]="car.doors" name="doors">
+        </div>
+        <div class="importImgs">
+            <input type="file" name="inputfile" [(ngModel)]="imgSrc">
+        </div>
+        <button (click)="addCars()"><a routerLink="/Cars List">Add</a></button>
+    </form>
+    
+</section>
+

@@ -1,0 +1,23 @@
+<section>
+    <div class="container" style="margin: auto;">
+        <h2 class="title" >List Of Cars</h2>
+        <div class="cards">
+            <ng-container *ngFor="let car of carService.carList">
+              <div *ngIf="carService.searsh.length === 0 || car.name === carService.searsh">
+                <a [routerLink]="['/car-details', car.id]" (click)="carService.getIndex(car.id)">
+                  <img [src]="car.image1" alt="">
+                  <div class="card-body">
+                    <h3 class="name">{{car.name}}</h3>
+                    <h3>{{car.price}}$</h3>
+                    <div class="contant">
+                      <p>{{car.prductionDate}}</p>|<p>{{car.fule}}</p>|<p>{{car.mileage}}</p>
+                    </div>
+                    <p *ngIf="car.rentedNow; else elseBlock">Rented Now: Yes</p>
+                    <ng-template #elseBlock>Rented Now: No</ng-template>
+                  </div>
+                </a>
+              </div>
+            </ng-container>
+          </div>
+     </div>
+</section>
